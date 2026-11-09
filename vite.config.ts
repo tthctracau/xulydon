@@ -5,19 +5,21 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/xulydon/' ,
-    plugins: [react(), tailwindcss()],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
+    base: '/xulydon/',
+    server" {
+    port: 3000,
+    host:'0.0.0.0',
     },
-    server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modify—file watching is disabled to prevent flickering during agent edits.
-      hmr: process.env.DISABLE_HMR !== 'true',
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
-      watch: process.env.DISABLE_HMR === 'true' ? null : {},
-    },
-  };
+plugins: [react()],
+define: {
+'process.env.API.KEY': JSON.stringify (env.GEMINI_API_KEY),
+  'process.env.GEMINI_API_KEY': JSON.stringify (env.GEMINI_API_KEY)
+},
+resolve: {
+  alias: {
+    '@': path.resolve(_dirname, '.'),
+      }
+}
+};
 });
+   
