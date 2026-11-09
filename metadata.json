@@ -1,0 +1,8 @@
+{
+  "name": "Hệ Thống Dashboard Quản Lý Tiếp Dân & Xử Lý Đơn Thư",
+  "description": "Dashboard thống kê thông minh, phân tích xu hướng và tự động tạo báo cáo tiếp công dân và xử lý đơn thư theo Nghị định 154/2026/NĐ-CP",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
